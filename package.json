@@ -1,13 +1,16 @@
 {
   "name": "angular.dev",
   "version": "0.0.0",
+  "private": true,
+  "imports": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "lint": "ng lint",
+    "format": "prettier --write ."
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^20.1.0-next",
     "@angular/compiler": "^20.1.0-next",
@@ -24,7 +27,13 @@
     "@angular/cli": "^20.1.0-next",
     "@angular/compiler-cli": "^20.1.0-next",
     "@types/node": "^16.11.35",
+    "angular-eslint": "20.2.0",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
     "ts-node": "~10.9.0",
-    "typescript": "~5.8.0"
+    "typescript": "~5.8.0",
+    "typescript-eslint": "8.40.0"
   }
 }

@@ -4,11 +4,11 @@ dist/
 # Node
 node_modules/
 
+# IDEs and editors
+.vscode/
+
 # System files
 .DS_Store
-
-# Environment files
-*.env
 
 # Angular build cache
 .angular/cache/
