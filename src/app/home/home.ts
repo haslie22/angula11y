@@ -9,11 +9,13 @@ import { HousingLocation } from '../housing-location/housing-location';
   imports: [HousingLocation],
   template: `
     <section>
+      <h2 class="sr-only">Search by City</h2>
       <form>
         <input type="text" placeholder="Filter by city" />
         <button class="primary" type="button">Search</button>
       </form>
       <section class="results">
+        <h2 class="sr-only">Search Results</h2>
         @for (housingLocation of housingLocationList; track housingLocation.id) {
           <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
         }

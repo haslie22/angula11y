@@ -13,7 +13,7 @@ import { HousingLocationInfo } from '../housing-location.interface';
         alt="Exterior photo of {{ housingLocation().name }}"
         crossorigin
       />
-      <h2 class="listing-heading">{{ housingLocation().name }}</h2>
+      <h3 class="listing-heading">{{ housingLocation().name }}</h3>
       <p class="listing-location">{{ housingLocation().city }}, {{ housingLocation().state }}</p>
     </section>
   `,
