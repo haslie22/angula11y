@@ -2,6 +2,6 @@
 <section class="home__results">
   <h2 class="home__title sr-only">Search Results</h2>
   @for (housingLocation of housingLocationList; track housingLocation.id) {
-    <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
+    <app-housing-location [housingLocation]="housingLocation" />
   }
 </section>
