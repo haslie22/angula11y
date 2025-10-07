@@ -1,0 +1,7 @@
+<app-search-form />
+<section class="results">
+  <h2 class="sr-only">Search Results</h2>
+  @for (housingLocation of housingLocationList; track housingLocation.id) {
+    <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
+  }
+</section>
