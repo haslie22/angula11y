@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 
-import { HousingLocationInfo } from '../housing-location.interface';
+import { HousingLocationInfo } from '../../components/housing-location/housing-location.interface';
 
-import { HousingLocation } from '../housing-location/housing-location';
-import { SearchForm } from '../search-form/search-form';
+import { HousingLocationComponent } from '../../components/housing-location/housing-location.component';
+import { SearchFormComponent } from '../../components/search-form/search-form.component';
 
 @Component({
   selector: 'app-home',
-  imports: [SearchForm, HousingLocation],
-  templateUrl: './home.html',
-  styleUrls: ['./home.css'],
+  imports: [SearchFormComponent, HousingLocationComponent],
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
 })
-export class Home {
+export class HomeComponent {
   private readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
   protected housingLocationList: HousingLocationInfo[] = [
     {
