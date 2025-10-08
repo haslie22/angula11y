@@ -7,4 +7,5 @@
   />
   <h3 class="housing-location__heading">{{ housingLocation().name }}</h3>
   <p class="housing-location__location">{{ housingLocation().city }}, {{ housingLocation().state }}</p>
+  <a class="housing-location__link" [routerLink]="[routeSegment, housingLocation().id]">Learn more</a>
 </section>
