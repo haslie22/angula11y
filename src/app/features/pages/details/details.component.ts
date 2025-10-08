@@ -5,8 +5,11 @@ import { HousingLocationInfo } from '../../components/housing-location/housing-l
 
 import { HousingService } from '../../../core/services/housing.service';
 
+import { ApplyFormComponent } from '../../components/apply-form/apply-form.component';
+
 @Component({
   selector: 'app-details',
+  imports: [ApplyFormComponent],
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css'],
 })

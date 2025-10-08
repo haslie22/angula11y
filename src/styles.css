@@ -28,9 +28,10 @@ body {
   white-space: nowrap;
 }
 
-.button_primary {
+.button_type_primary {
   color: white;
   background: var(--primary-color);
   border: solid 1px var(--primary-color);
   border-radius: 8px;
+  padding: 10px;
 }
