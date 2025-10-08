@@ -1,0 +1,12 @@
+<form class="apply-form" [formGroup]="applyForm" (submit)="submitApplication()">
+  <label class="apply-form__label" for="first-name">First Name</label>
+  <input class="apply-form__input" id="first-name" type="text" formControlName="firstName" />
+
+  <label class="apply-form__label" for="last-name">Last Name</label>
+  <input class="apply-form__input" id="last-name" type="text" formControlName="lastName" />
+
+  <label class="apply-form__label" for="email">Email</label>
+  <input class="apply-form__input" id="email" type="email" formControlName="email" />
+
+  <button class="apply-form__button button button_type_primary" type="submit">Apply now</button>
+</form>
