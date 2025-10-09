@@ -8,10 +8,19 @@
 import { ApplicationConfig } from '@angular/core';
 
 import { provideProtractorTestingSupport } from '@angular/platform-browser';
-import { provideRouter } from '@angular/router';
+import { provideRouter, TitleStrategy } from '@angular/router';
 
 import { appRoutesConfig } from './app.routes';
 
+import { TitleStrategyService } from './core/services/title-strategy.service';
+
 export const appConfig: ApplicationConfig = {
-  providers: [provideProtractorTestingSupport(), provideRouter(appRoutesConfig)],
+  providers: [
+    provideProtractorTestingSupport(),
+    provideRouter(appRoutesConfig),
+    {
+      provide: TitleStrategy,
+      useClass: TitleStrategyService,
+    },
+  ],
 };

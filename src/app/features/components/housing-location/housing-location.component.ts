@@ -1,7 +1,7 @@
 import { Component, inject, input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
-import { HousingLocationInfo } from './housing-location.interface';
+import { HousingLocationInfo } from '../../../shared/models/housing-location-info.model';
 
 @Component({
   selector: 'app-housing-location',
