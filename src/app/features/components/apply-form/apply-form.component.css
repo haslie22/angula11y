@@ -13,8 +13,10 @@
 .apply-form__input {
   font-size: 16pt;
   width: 400px;
-  padding: 5px 10px;
+  padding-inline: 10px;
+  padding-block: calc(10px - var(--touch-area-padding));
   border: none;
   border-bottom: solid 0.3px;
-  margin: 5px 0 25px;
+  margin-top: var(--touch-area-padding);
+  margin-bottom: calc(15px + var(--touch-area-padding) * 2);
 }

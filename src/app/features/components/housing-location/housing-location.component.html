@@ -1,11 +1,13 @@
-<section class="housing-location">
-  <img
-    class="housing-location__photo"
-    [src]="housingLocation().photo"
-    alt="Exterior photo of {{ housingLocation().name }}"
-    crossorigin
-  />
-  <h3 class="housing-location__heading">{{ housingLocation().name }}</h3>
+<article class="housing-location" [attr.aria-labelledby]="'housing-location-' + housingLocation().id + '-title'">
+  <h3 class="housing-location__heading" id="housing-location-{{ housingLocation().id }}-title">
+    {{ housingLocation().name }}
+  </h3>
+  <img class="housing-location__photo" [src]="housingLocation().photo" alt="" crossorigin />
   <p class="housing-location__location">{{ housingLocation().city }}, {{ housingLocation().state }}</p>
-  <a class="housing-location__link link" [routerLink]="[routeSegment, housingLocation().id]">Learn more</a>
-</section>
+  <a
+    class="housing-location__link link"
+    [routerLink]="[routeSegment, housingLocation().id]"
+    [attr.aria-label]="'Learn more about ' + housingLocation().name"
+    >Learn more</a
+  >
+</article>

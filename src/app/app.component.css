@@ -1,5 +1,6 @@
 :host {
   --content-padding: 10px;
+  --touch-area-padding: 4px;
 }
 
 .app__content {
