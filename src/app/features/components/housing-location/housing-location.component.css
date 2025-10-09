@@ -1,9 +1,11 @@
 .housing-location {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--accent-color);
   border-radius: 30px;
   padding-bottom: 30px;
+  transition: box-shadow 0.3s ease-out;
 }
 
 .housing-location__heading {
@@ -29,12 +31,30 @@
 }
 
 .housing-location__link {
-  padding: 12px 20px;
-  text-decoration: none;
+  align-self: flex-start;
   color: var(--primary-color);
+  text-decoration: none;
+  padding: 12px 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
 
   &::after {
     content: '\203A';
     margin-left: 5px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .housing-location {
+    &:hover {
+      box-shadow: 3px 3px 6px var(--accent-shadow-color);
+    }
   }
 }

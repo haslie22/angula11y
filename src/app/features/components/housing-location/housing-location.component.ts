@@ -1,5 +1,5 @@
-import { Component, input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject, input } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 import { HousingLocationInfo } from './housing-location.interface';
 
@@ -11,5 +11,10 @@ import { HousingLocationInfo } from './housing-location.interface';
 })
 export class HousingLocationComponent {
   housingLocation = input.required<HousingLocationInfo>();
+  private readonly router = inject(Router);
   protected readonly routeSegment = 'details';
+
+  navigateTo(id: number) {
+    this.router.navigate([this.routeSegment, `${id}`]);
+  }
 }

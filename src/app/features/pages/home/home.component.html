@@ -1,7 +1,11 @@
 <app-search-form />
-<section class="home__results" aria-labelledby="home-title">
-  <h2 class="home__title sr-only" id="home-title">Search Results</h2>
-  @for (housingLocation of housingLocationList; track housingLocation.id) {
-    <app-housing-location [housingLocation]="housingLocation" />
-  }
+<section class="results home__results" aria-labelledby="results-title">
+  <h2 class="results__title sr-only" id="results-title">Search Results</h2>
+  <ul class="results__list">
+    @for (housingLocation of housingLocationList; track housingLocation.id) {
+      <li class="results__list-item">
+        <app-housing-location [housingLocation]="housingLocation" />
+      </li>
+    }
+  </ul>
 </section>

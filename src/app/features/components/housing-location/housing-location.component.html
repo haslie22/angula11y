@@ -1,11 +1,16 @@
-<article class="housing-location" [attr.aria-labelledby]="'housing-location-' + housingLocation().id + '-title'">
+<article
+  class="housing-location card"
+  [attr.tabindex]="0"
+  [attr.aria-labelledby]="'housing-location-' + housingLocation().id + '-title'"
+  (keydown.enter)="navigateTo(housingLocation().id)"
+>
   <h3 class="housing-location__heading" id="housing-location-{{ housingLocation().id }}-title">
     {{ housingLocation().name }}
   </h3>
   <img class="housing-location__photo" [src]="housingLocation().photo" alt="" crossorigin />
   <p class="housing-location__location">{{ housingLocation().city }}, {{ housingLocation().state }}</p>
   <a
-    class="housing-location__link link"
+    class="housing-location__link link link_decor_underline"
     [routerLink]="[routeSegment, housingLocation().id]"
     [attr.aria-label]="'Learn more about ' + housingLocation().name"
     >Learn more</a
