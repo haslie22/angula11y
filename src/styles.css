@@ -9,9 +9,10 @@ body {
 }
 
 :root {
-  --primary-color: #605dc8;
-  --secondary-color: #8b89e6;
-  --accent-color: #e8e7fa;
+  --primary-color: #4441be;
+  --secondary-color: #6e6cc7;
+  --accent-color: #ebebfa;
+  --border-color: #0d0b6b;
   --shadow-color: #e8e8e8;
 }
 
@@ -26,6 +27,26 @@ body {
   clip-path: inset(50%);
   overflow: hidden;
   white-space: nowrap;
+}
+
+.input,
+.link {
+  border-radius: 2px;
+}
+
+.button,
+.input,
+.link {
+  &:focus-visible {
+    outline: solid 2px var(--border-color);
+    outline-offset: 2px;
+  }
+}
+
+.link {
+  &:focus-visible {
+    outline-offset: 0;
+  }
 }
 
 .button_type_primary {
