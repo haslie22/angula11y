@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { HousingLocationInfo } from '../../components/housing-location/housing-location.interface';
+import { HousingLocationInfo } from '../../../shared/models/housing-location-info.model';
 
 import { HousingService } from '../../../core/services/housing.service';
 
