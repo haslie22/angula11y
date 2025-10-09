@@ -1,7 +1,15 @@
 <section class="search-form">
   <h2 class="search-form__title sr-only">Search by City</h2>
-  <form class="search-form__form">
-    <input class="search-form__input input" type="text" placeholder="Filter by city" />
-    <button class="search-form__button button button_type_primary" type="button">Search</button>
-  </form>
+  <search>
+    <form class="search-form__form">
+      <input
+        class="search-form__input input"
+        type="text"
+        placeholder="Enter a city name"
+        aria-describedby="search-help"
+      />
+      <button class="search-form__button button button_type_primary" type="button">Search</button>
+      <p id="search-help" class="sr-only">Type a city name and press Search to filter results</p>
+    </form>
+  </search>
 </section>
